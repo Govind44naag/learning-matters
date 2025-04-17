@@ -41,7 +41,7 @@ app.post('/signup',async function(req,res){
 })
 //global cache
 app.use(function(err,req,res,next){
-        console.log(err)
+         
         res.status(400).json({
                 msg:"Invalid Input Structure",
                 success:false,
