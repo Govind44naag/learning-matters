@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        #pack{
+            border:2px black;
+            margin:50px;
+             padding-top:20px;
+            border-radius:10px;
+            box-shadow: 10px 10px 30px rgb(0, 0, 0);
+        }
+        #name{
+            box-sizing: border-box;
+            background-color:rgb(59, 158, 69);
+            color:rgb(13, 41, 86);
+            
+        }
+        #middle{
+            background-color:rgb(63, 19, 11);
+        }
+        #lorem{
+            color:rgb(254, 184, 202);
+        }
+         
+        #fspan{
+            padding-right:100px;
+        }
+        #sspan{
+            padding-left:100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="pack" style="background-color:black">
+        <div id="name"><span id="fspan">Govind Thakur</span>
+        <span id="sspan"><button id="button" style="color:black" onClick="clickButton()">Light Mode</button></span></div>
+        <div id="middle">
+            <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi dolor ducimus culpa nihil earum voluptate voluptates vitae vero veritatis perspiciatis?</p>
+        </div>
+        <div id="footer" style="color:white;">
+            <span id="footer1">B.Tech Computer Science & Information Technology 3rd yr</span>
+            <span id="footer2">Date:22/04/2025</span>
+        </div>
+    </div>
+    <script>
+        const  footer  =  document.querySelector('#footer')
+        const box=document.querySelector('#pack')
+        const button=document.querySelector('#button')
+        function clickButton(){
+            if(box.style.cssText=="background-color:white"){
+                box.style.cssText="background-color:black"
+                footer.style.cssText="background-color:black; color:white;"
+                button.style.cssText="background-color:black; color:white"
+                button.innerHTML='Dark Mode'
+        
+            }
+            else{
+                box.style.cssText="background-color:white"
+                footer.style.cssText="background-color:white; color:black;"
+                button.style.cssText="background-color:white:color:black"
+                button.innerHTML='Light Mode'
+        
+            }
+         
+ 
+        }
+       
+    </script>
+</body>
+</html>
