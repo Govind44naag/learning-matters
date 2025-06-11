@@ -9,7 +9,7 @@ function App(){
 
 <button onClick={function(){
   setState(1)
-}}>{arr[0]}</button>
+}}>1</button>
 <button onClick={function (){
   setState(2)
 }}>2</button>
