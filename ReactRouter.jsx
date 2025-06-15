@@ -2,7 +2,7 @@
 //the below is  laxy loading curent it is full loading 
 //Note replace components to default like export function not ,export default function yes
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import { lazy } from "react";
+import { lazy , Suspense } from "react";
 const Landing=lazy(()=>import("./components/Landing"))
 const DashBoard= lazy(()=>import('./components/DashBoard'))
 
@@ -22,9 +22,12 @@ return (
 	<div>
 		<BrowserRouter>
 		<Appbar/>
+		  <Suspense  fallback={<div>Loading ...</div>}>{/*fallback  when component is loading then inside div will render */}
+
 		<Routes>
 			{routes.map(route=><Route path={route.path} element = {route.element}/>)}
 		</Routes>
+			  </Suspense>
 		</BrowserRouter>
 	</div>
 )
